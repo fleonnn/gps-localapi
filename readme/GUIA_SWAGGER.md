@@ -86,7 +86,7 @@ export class CrearDispositivoDTO {
   @IsString()
   nombreVehiculo: string;
   
-  // Otros campos...
+ 
 }
 ```
 
@@ -112,7 +112,7 @@ export class DispositivoGPSDto {
   })
   numeroIdentificador: string;
 
-  // Otros campos...
+
 }
 ```
 
