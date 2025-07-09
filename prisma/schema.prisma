@@ -1,0 +1,44 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Modelo para los dispositivos GPS
+model DispositivoGPS {
+  id                     Int          @id @default(autoincrement())
+  numeroIdentificador    String       @unique
+  nombreVehiculo         String
+  tipoVehiculo           String
+  proveedor              String
+  estadoActual           String
+  fechaUltimaActualizacion DateTime
+  createdAt              DateTime     @default(now())
+  updatedAt              DateTime     @updatedAt
+  
+  // Relación con posiciones GPS
+  posiciones             PosicionGPS[]
+}
+
+// Modelo para las posiciones GPS
+model PosicionGPS {
+  id              Int          @id @default(autoincrement())
+  latitud         Float
+  longitud        Float
+  velocidad       Float
+  direccion       Int
+  fechaHora       DateTime
+  nombreUbicacion String
+  estadoMotor     String
+  createdAt       DateTime     @default(now())
+  
+  // Relación con el dispositivo GPS
+  dispositivoId   Int
+  dispositivo     DispositivoGPS @relation(fields: [dispositivoId], references: [id])
+}

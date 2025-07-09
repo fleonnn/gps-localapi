@@ -1,0 +1,12 @@
+import { Module } from '@nestjs/common';
+import { GPSController } from './gps.controller';
+import { PrismaModule } from '../prisma/prisma.module';
+import { GPSPrismaService } from './gps.prisma.service';
+
+@Module({
+  imports: [PrismaModule],
+  controllers: [GPSController],
+  providers: [GPSPrismaService],
+  exports: [GPSPrismaService],
+})
+export class GPSModule {}
