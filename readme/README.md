@@ -23,7 +23,8 @@ Este proyecto es una API REST desarrollada con NestJS que permite gestionar disp
 - 🛠️ [Guía de Prisma](GUIA_PRISMA.md) - Comandos y funcionalidades de Prisma
 - 🔍 [Casos de Uso](CASOS_DE_USO.md) - Ejemplos prácticos de uso de la API
 - ✅ [Guía de Validaciones](GUIA_VALIDACIONES.md) - Implementación de validaciones con class-validator
-- 🔌 [Conexión DBeaver](CONEXION_DBEAVER.md) - Guía para conectar y visualizar la base de datos en DBeaver
+- � [Guía de Swagger](GUIA_SWAGGER.md) - Documentación interactiva de la API con Swagger
+- �🔌 [Conexión DBeaver](CONEXION_DBEAVER.md) - Guía para conectar y visualizar la base de datos en DBeaver
 - 🖼️ [Guía Visual DBeaver](GUIA_VISUAL_DBEAVER.md) - Tutorial con imágenes para configurar DBeaver
 - 🔄 [Solución de Importaciones](SOLUCION_IMPORTACIONES.md) - Resolver problemas con módulos faltantes
 
